@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:url("./img/background.png");
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  margin:0px;
+  padding: 0px;
+  font-style: Myriad Pro;
+  font-size: 20px;
+  list-style-type: none;
+  color: "#262626",
+}
+
+li{
+  margin:10px
+}
