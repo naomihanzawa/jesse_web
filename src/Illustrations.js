@@ -1,8 +1,11 @@
 
 import styled from 'styled-components'
+import React, { useState } from 'react';
+
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import Illustration from './Illustration.js';
 import Illustration2 from './Illustration2.js';
+import background from './img/background.png';
 import hic from './img/hic.jpg';
 import bluebeard from './img/./bluebeard.jpg';
 import motionwaitdadwasginger from './img/motionwaitdadwasginger.jpg';
@@ -19,20 +22,25 @@ import scan66 from './img/Scan 66.png';
 import smokers from './img/smokers.png';
 import stipplerhom from './img/stipplerhom.png';
 import pedro from './img/pedro.png';
+import Detail from './Detail.js';
+import Menu from './Menu.js';
 
-
-// import {BrowserRouter, Switch, Route,} from "react-router-dom";
 
 function Illustrations() {
   return (
+    <div 
+    style={{ 
+      backgroundImage:"background"
+      }}>
+    <Menu/>
     <ResponsiveMasonry
     columnsCountBreakPoints={{350: 1, 750: 2, 900: 3, 1300: 4}}>
     <Masonry
     style={{  
       width:"1500px",
       margin:"0 auto"
-            }}>   
-        <Illustration src={moonlight}/>
+      }}>   
+        <Illustration src={moonlight} title="moonlight"/>
         <Illustration src={motionwaitdadwasginger}/>
         <Illustration src={scan66}/>
         <Illustration src={lal}/>
@@ -51,6 +59,7 @@ function Illustrations() {
         <Illustration src={pedro}/>
      </Masonry>
   </ResponsiveMasonry>
+  </div>
 
   );
 }

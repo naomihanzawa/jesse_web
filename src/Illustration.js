@@ -1,14 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import hic from './img/hic.jpg';
-import styled from 'styled-components'
-// import {BrowserRouter, Switch, Route,} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 function Illustration(props) {
+const history = useHistory('');
+
+async function handleClick(event){
+  event.preventDefault();
+  let src = await encodeURIComponent(props.src);
+  history.push(`/detail/title=${props.title}/src=${src}`);
+  }
+
   return (
     <div style={{
       margin:"0 auto",
-      }}>
+      }}
+      onClick={handleClick}>
      <img style={{  
         display: "flex",
         justifyContent: "center",
@@ -20,7 +27,8 @@ function Illustration(props) {
         float:"left"
         }}
         src={props.src}/>
-    </div>
+  </div>
+  
 
   );
 }
